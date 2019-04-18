@@ -1,8 +1,8 @@
 {% set name = "r-xtensor" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' %}
-{% set version = "0.10.1" %}
-{% set sha256 = "547cd969d0bcfaf78e469c8325bdf0884dc88ce22f3564ed69c00d2af5018dfc" %}
+{% set version = "0.11.0" %}
+{% set sha256 = "43b87c7e77217b95cf72095912b452c1589c653ab0939962ca540f12b8bafbcf" %}
 
 package:
   name: {{ name|lower }}
@@ -30,11 +30,11 @@ requirements:
     - {{posix}}zip               # [win]
   host:
     - r-base
-    - xtensor-r >=0.10.0,<0.11.0
+    - xtensor-r >=0.11.0,<0.12.0
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
-    - xtensor-r >=0.10.0,<0.11.0
+    - {{ pin_compatible('xtensor-r', max_pin='x.x') }}
 
 test:
   commands:
