@@ -1,8 +1,8 @@
 {% set name = "r-xtensor" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' %}
-{% set version = "0.11.0" %}
-{% set sha256 = "43b87c7e77217b95cf72095912b452c1589c653ab0939962ca540f12b8bafbcf" %}
+{% set version = "0.11.1" %}
+{% set sha256 = "0a69e0c36e10d878c280b78c7fccdf2987704b927c1898d979c7bb98064de5db" %}
 
 package:
   name: {{ name|lower }}
