@@ -1,7 +1,7 @@
 About r-xtensor
 ===============
 
-Home: http://github.com/QuantStack/Xtensor.R
+Home: http://github.com/xtensor-stack/Xtensor.R
 
 Package license: BSD-3-Clause
 
@@ -9,9 +9,9 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-xtensor-feeds
 
 Summary: R bindings for xtensor, the C++ tensor algebra library
 
-Development: https://github.com/QuantStack/xtensor-r
+Development: https://github.com/xtensor-stack/Xtensor.R
 
-Documentation: http://xtensor-r.readthedocs.io/
+Documentation: https://xtensor-r.readthedocs.io/
 
 Multi dimensional arrays with broadcasting and lazy computing
 
