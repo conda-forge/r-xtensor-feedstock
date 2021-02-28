@@ -1,8 +1,8 @@
 {% set name = "r-xtensor" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' %}
-{% set version = "0.13.0" %}
-{% set sha256 = "08fc3b9f5de94a3178b9af97a31684efdd2d490bfe453ba2de643ed7f472ccd3" %}
+{% set native = "m2w64-" %}
+{% set version = "0.13.1" %}
+{% set sha256 = "16d9b06617f41d11b32768556f7743e8138c9a078ea093b7ae75485b4cd2c471" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -46,8 +46,8 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'R bindings for xtensor, the C++ tensor algebra library'
-  description: 'Multi dimensional arrays with broadcasting and lazy computing'
+  summary: R bindings for xtensor, the C++ tensor algebra library
+  description: Multi dimensional arrays with broadcasting and lazy computing
   doc_url: https://xtensor-r.readthedocs.io/
   dev_url: https://github.com/xtensor-stack/Xtensor.R
 
