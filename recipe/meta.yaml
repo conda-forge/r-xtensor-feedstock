@@ -30,7 +30,7 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - xtensor-r >=0.13.0,<0.14.0
+    - xtensor-r >=0.14.0,<0.15.0
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
