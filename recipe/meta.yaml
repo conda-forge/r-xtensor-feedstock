@@ -1,8 +1,8 @@
 {% set name = "r-xtensor" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = "m2w64-" %}
-{% set version = "0.14.0" %}
-{% set sha256 = "59d847dcd53b5e7a7d3bb2f82b1fdbc1de0a68af8c4ff04d016a2a1cd68cba7d" %}
+{% set version = "0.14.1" %}
+{% set sha256 = "0e5a0709dab0277f93ed2174f31efb4da4dab3e4f074c4ff009df10e09234dbb" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
