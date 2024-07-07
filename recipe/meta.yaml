@@ -1,6 +1,5 @@
 {% set name = "r-xtensor" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = "m2w64-" %}
 {% set version = "0.14.1" %}
 {% set sha256 = "0e5a0709dab0277f93ed2174f31efb4da4dab3e4f074c4ff009df10e09234dbb" %}
 
@@ -14,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
@@ -23,6 +22,7 @@ requirements:
   build:
     - {{ compiler('cxx') }}        # [not win]
     - {{ compiler('m2w64_cxx') }}  # [win]
+    - {{ stdlib("c") }}    # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
@@ -33,7 +33,6 @@ requirements:
     - xtensor-r >=0.14.0,<0.15.0
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - {{ pin_compatible('xtensor-r', max_pin='x.x') }}
 
 test:
