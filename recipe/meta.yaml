@@ -1,7 +1,7 @@
 {% set name = "r-xtensor" %}
 {% set posix = 'm2-' if win else '' %}
-{% set version = "0.14.1" %}
-{% set sha256 = "0e5a0709dab0277f93ed2174f31efb4da4dab3e4f074c4ff009df10e09234dbb" %}
+{% set version = "0.16.0" %}
+{% set sha256 = "f3d38ed6b0e66fa593b47d20c65659a931e229c1431b01ed3619cf866e28798c" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 3
   rpaths:
     - lib/R/lib/
     - lib/
@@ -25,14 +25,16 @@ requirements:
     - {{ stdlib("c") }}    # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
-    - {{ posix }}sed               # [win]
+    - {{ posix }}sed
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - xtensor-r >=0.14.0,<0.15.0
+    - r-rcpp
+    - xtensor-r >=0.16.0,<0.170
   run:
     - r-base
+    - r-rcpp
     - {{ pin_compatible('xtensor-r', max_pin='x.x') }}
 
 test:
